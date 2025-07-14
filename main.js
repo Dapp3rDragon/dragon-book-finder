@@ -125,9 +125,9 @@ const weights = {
     "Format": 2, "Mature Content": 1, "Content Warnings": 0
 };
 
-const MAX_LINKS_PER_NODE = 7;
+const MAX_LINKS_PER_NODE = 10;
 const MIN_LINKS_PER_NODE = 3;
-const MIN_SIMILARITY_SCORE = 5;
+const MIN_SIMILARITY_SCORE = 100;
 
 function getWeightedSimilarity(a, b) {
     return Object.keys(tagGroups).reduce((score, cat) => {
