@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dragon Book Finder</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- D3.js for force-directed graph -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="sidebar" id="tag-container">
+        <h2 style="text-align:center; margin-bottom: 10px;">🔍 Filter Books</h2>
+    </div>
+
+    <div class="content">
+        <div class="top-bar">
+            <h1>🐉 Find Your Perfect Dragon Fantasy Book</h1>
+            <button id="darkModeToggle" style="padding: 8px 12px; border-radius: 6px; background-color: #555; color: #fff; cursor: pointer;">
+                🌙 Dark Mode
+            </button>
+            <select id="sort-select">
+                <option value="">Sort by...</option>
+                <option value="title">Title (A-Z)</option>
+                <option value="author">Author (A-Z)</option>
+                <option value="year">Newest First</option>
+                <option value="length">Shortest to Longest</option>
+            </select>
+        </div>
+        <div style="margin-top: 10px;">
+            <button onclick="toggleGraph()" style="padding: 10px; background-color: #c9974d; color: white; border: none; border-radius: 6px; cursor: pointer;">
+                📊 Visualize the Books
+            </button>
+            <div id="graph-wrapper" style="display: none; margin-top: 10px;">
+                <div id="graph-container">
+                    <svg id="graph" width="100%" height="600"></svg>
+                </div>
+                <div id="tooltip-panel" class="tooltip-panel hidden"></div>
+            </div>
+
+            <div id="graph-legend" style="margin-top: 10px;"></div>
+        </div>
+
+        <div id="book-list" style="margin-top: 20px;"></div>
+    </div>
+
+    <!-- Book/Tag Data -->
+    <script src="data.js"></script>
+
+    <!-- Main JS -->
+    <script src="main.js"></script>
+</body>
+</html>
