@@ -118,9 +118,9 @@ sortSelect.addEventListener('change', renderBooks);
 
 // === Graph Similarity Weights ===
 const weights = {
-    "Audience": 5, "Tone/Theme": 10, "Subgenre": 9, "Pacing": 5,
-    "POV/Character": 8, "Dragon Involvement": 8, "Plot Elements": 9,
-    "Romance": 3, "Violence": 2, "Magic": 5, "Worldbuilding": 7,
+    "Audience": 8, "Tone/Theme": 6, "Subgenre": 9, "Pacing": 5,
+    "POV/Character": 8, "Dragon Involvement": 8, "Plot Elements": 6,
+    "Romance": 3, "Violence": 2, "Magic": 5, "Worldbuilding": 6,
     "Social Themes": 3, "Series Length & Completion": 2,
     "Format": 2, "Mature Content": 1, "Content Warnings": 0
 };
